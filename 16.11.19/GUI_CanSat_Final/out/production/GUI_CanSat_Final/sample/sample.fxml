@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../GitHub/GUI-JavaFX/485672.jpg" />
+         </image>
+      </ImageView>
+      <CategoryAxis layoutX="10.0" layoutY="10.0" side="BOTTOM" visible="false" />
+      <LineChart layoutX="10.0" layoutY="13.0" prefHeight="253.0" prefWidth="279.0" title="Temperature Sensor" visible="false">
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <NumberAxis layoutX="10.0" layoutY="10.0" opacity="0.0" side="LEFT" visible="false" />
+      <Pane layoutX="583.0" layoutY="50.0" prefHeight="253.0" prefWidth="279.0">
+         <children>
+            <Label layoutX="87.0" layoutY="-2.0" text="GPS Sensor" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="69.0" text="Longitude" />
+            <Label layoutX="198.0" layoutY="69.0" text="Lattitude" />
+            <Label layoutX="20.0" layoutY="175.0" prefHeight="21.0" prefWidth="178.0" text="Number of Sattelite Seen " />
+            <Label layoutX="58.0" layoutY="116.0" text="0" />
+            <Label layoutX="223.0" layoutY="116.0" text="0" />
+            <Label layoutX="92.0" layoutY="206.0" text="0" />
+            <Label layoutX="202.0" layoutY="175.0" text="Altitude" />
+            <Label layoutX="224.0" layoutY="206.0" text="0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="253.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="279.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="862.0" layoutY="50.0" prefHeight="253.0" prefWidth="279.0">
+         <children>
+            <Label layoutX="86.0" layoutY="-2.0" text="Gyroscope" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="69.0" text="X Axis" />
+            <Label layoutX="119.0" layoutY="69.0" text="Y Axis" />
+            <Label layoutX="209.0" layoutY="69.0" text="Z Axis" />
+            <Label layoutX="40.0" layoutY="141.0" text="0" />
+            <Label layoutX="134.0" layoutY="141.0" text="0" />
+            <Label layoutX="224.0" layoutY="141.0" text="0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="253.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="279.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="304.0" layoutY="50.0" prefHeight="253.0" prefWidth="279.0">
+         <children>
+            <Label layoutX="69.0" text="Accelerometer" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="69.0" text="X Axis" />
+            <Label layoutX="119.0" layoutY="69.0" text="Y Axis" />
+            <Label layoutX="209.0" layoutY="69.0" text="Z Axis" />
+            <Label layoutX="40.0" layoutY="141.0" text="0" />
+            <Label layoutX="134.0" layoutY="141.0" text="0" />
+            <Label layoutX="224.0" layoutY="141.0" text="0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="253.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="279.0" />
+         </children>
+      </Pane>
+      <NumberAxis disable="true" layoutX="107.0" layoutY="270.0" opacity="0.0" side="LEFT" visible="false" />
+      <CategoryAxis animated="false" disable="true" layoutX="779.0" layoutY="406.0" opacity="0.0" side="BOTTOM" visible="false" />
+      <ToggleButton layoutX="969.0" layoutY="6.0" mnemonicParsing="false" text="Connect (Toggle)" />
+      <Button alignment="CENTER" layoutX="879.0" layoutY="6.0" mnemonicParsing="false" onAction="#connectButtonClicked" text="Connect" />
+      <ComboBox fx:id="comPortBox" layoutX="710.0" layoutY="6.0" onShown="#comPortFind" prefWidth="150.0" />
+      <Label layoutX="59.0" layoutY="5.0" text="Welcome to CanSat GUI. Select a Port to Get Started: ">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="1077.0" layoutY="689.0" text="Made with Love by Asteroid Invader" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="253.0" layoutX="25.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="279.0" />
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="253.0" prefWidth="279.0">
+         <children>
+            <LineChart layoutX="14.0" layoutY="41.0" prefHeight="253.0" prefWidth="279.0" title="Temperature Sensor">
+               <padding>
+                  <Insets left="1.0" />
+               </padding>
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </LineChart>
+         </children>
+      </Pane>
+      <Pane layoutX="27.0" layoutY="320.0" prefHeight="253.0" prefWidth="279.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="253.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="279.0" />
+            <Label layoutX="65.0" layoutY="-2.0" prefHeight="25.0" prefWidth="150.0" text="Battery Voltage" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="129.0" layoutY="66.0" prefHeight="25.0" prefWidth="39.0" text="Volt" />
+            <Label layoutX="138.0" layoutY="127.0" prefHeight="32.0" prefWidth="6.0" text="0" />
+         </children>
+      </Pane>
+      <Pane layoutX="304.0" layoutY="320.0" prefHeight="253.0" prefWidth="279.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="253.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="279.0" />
+            <Label layoutX="40.0" layoutY="-2.0" prefHeight="32.0" prefWidth="200.0" text="Barometric Pressure" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="65.0" prefHeight="25.0" prefWidth="42.0" text="Pascal" />
+            <Label layoutX="136.0" layoutY="121.0" prefHeight="32.0" prefWidth="6.0" text="0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
